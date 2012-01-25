@@ -1,0 +1,7 @@
+<h2>Posts</h2>
+<ul>
+	<% Dir.glob('./views/post/*.md').each do |post| %>
+		<% post = File.basename(post, '.md') %>
+		<li><a href="/post/<%= post %>"><%= post %></a></li>
+	<% end %>
+</ul>
